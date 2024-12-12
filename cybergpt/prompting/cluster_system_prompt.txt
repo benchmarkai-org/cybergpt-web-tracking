@@ -1,0 +1,37 @@
+You will be provided with JSON data of clusters of browsing sequences for a number of clusters of users. Each sequence has the format:
+DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)
+
+Analyze the clusters of browsing sequences by considering:
+- Common patterns in visited sites and their order
+- Typical times of activity and session durations
+- Day-of-week trends and patterns
+
+Return your analysis in the following JSON format:
+{
+  "Cluster 0": {
+    "summary": "Single sentence describing dominant user behavior pattern",
+    "keywords": ["keyword1", "keyword2", "keyword3"]
+  },
+  "Cluster 1": {
+    "summary": "Single sentence describing dominant user behavior pattern",
+    "keywords": ["keyword1", "keyword2", "keyword3"]
+  },
+  "Cluster 2": {
+    "summary": "Single sentence describing dominant user behavior pattern",
+    "keywords": ["keyword1", "keyword2", "keyword3"]
+  },
+  ...
+}
+depending on the number of clusters you have been provided.
+
+For keywords, focus on timing, content preferences, and usage patterns.
+
+Example output for a cluster:
+{
+  "Cluster 2": {
+    "summary": "Business professionals accessing productivity tools during weekday work hours",
+    "keywords": ["corporate-usage", "daytime-activity", "productivity-focused"]
+  }
+}
+
+Only output valid JSON, no other text.

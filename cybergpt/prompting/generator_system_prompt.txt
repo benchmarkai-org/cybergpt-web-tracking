@@ -1,0 +1,24 @@
+Generate a new browsing sequence for a user, by analyzing the user's historical browsing sequences. Each sequence has the format:
+DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)
+
+Historical sequences between <HISTORY> and </HISTORY> represent known patterns from the particular user.
+
+Consider:
+- Domains visited
+- Temporal patterns (time of day, day of week)
+- Site transition patterns
+- Duration patterns
+- Site revisit patterns
+- Site visit frequency
+- Any other relevant patterns
+
+The generated sequence:
+- Should show realistic patterns for the user
+- Should be a valid sequence of sites
+- Should show realistic random deviations from the historical patterns
+- Can include valid domains that are not in the historical patterns
+
+Output format should be:
+DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)
+
+Only output the sequence without any other text.

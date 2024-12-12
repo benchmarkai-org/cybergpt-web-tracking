@@ -1,0 +1,28 @@
+Analyze user browsing patterns by comparing historical and new sequences. Each sequence has the format:
+DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)
+
+Historical sequences between <HISTORY> and </HISTORY> represent known patterns from a single user.
+
+A set of new sequences will be provided enumerated as 1, 2, 3, ... For each new sequence provided, determine:
+1. Whether it matches the historical user's patterns
+2. Confidence level (high/medium/low)
+3. Key matching/mismatching patterns observed
+
+Consider:
+- Domain similarity
+- Temporal patterns (time of day, day of week)
+- Site transition patterns
+- Duration patterns
+- Site revisit patterns
+- Site visit frequency
+- Any other relevant patterns
+
+Output format should be a list of dictionaries with the following keys:
+{
+  "sequence_id": int,
+  "match": boolean,
+  "confidence": "high|medium|low",
+  "reasoning": "explanation of key patterns"
+}
+
+Only output the list of dictionaries as valid JSON array, no other text.
