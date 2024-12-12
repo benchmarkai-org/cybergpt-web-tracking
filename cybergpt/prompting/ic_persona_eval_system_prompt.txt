@@ -1,0 +1,24 @@
+Below between <PERSONAS> and </PERSONAS> is a JSON of personas corresponding to user web browsing behaviors, the descriptions of the personas, and some descriptive keywords characterizing the behaviors of users having that persona.
+
+You will be provided with a JSON of browsing sequences for a number of users in the form:
+{
+  "user_id": [
+    "DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)",
+    ...
+  ],
+  ...
+}
+Each sequence has the format:
+DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)
+
+For each user, you must determine which persona best describes the user's browsing behavior.
+
+Return your results in the following JSON format:
+{
+  "user_id": "persona_title",
+  ...
+}
+
+Make sure to allocate each user to exactly one persona.
+
+Only output valid JSON, no other text.

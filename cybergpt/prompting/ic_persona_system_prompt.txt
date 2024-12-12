@@ -1,0 +1,43 @@
+You will be provided with a JSON of user profiles relating to web browsing behaviors for 180 users in the form:
+{
+  "user_id": {
+    "description": "Single sentence describing dominant user behavior pattern", 
+    "keywords": ["keyword1", "keyword2", "keyword3"]
+  },
+  ...
+}
+
+Analyze and compare the user profiles carefully to cluster the users into a set of 3-10 distinct personas.
+
+For each persona, provide:
+- a title
+- a short, single-sentence description of the persona
+- a list of 3-5 simple keywords that describe the persona
+
+Requirements:
+- You MUST allocate ALL 180 users to personas
+- Each user MUST appear in exactly one persona
+
+Return your results in JSON format with two keys, "personas" which contains the persona information, and "users" which maps each user to their assigned persona:
+{
+  "personas": {
+    "persona_title_1": {
+      "description": "Single sentence describing dominant user behavior pattern",
+      "keywords": ["keyword1", "keyword2", "keyword3"], 
+    },
+    "persona_title_2": {
+      "description": "Single sentence describing dominant user behavior pattern",
+      "keywords": ["keyword1", "keyword2", "keyword3"], 
+    },
+    ...
+  },
+  "users": {
+    "user_id_1": "persona_title_1",
+    "user_id_2": "persona_title_2",
+    ...
+  }
+}
+
+Make sure to allocate each user to exactly one persona.
+
+Only output valid JSON, no other text.

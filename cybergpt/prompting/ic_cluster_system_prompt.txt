@@ -1,0 +1,41 @@
+You will be provided with a JSON of browsing sequences for a number of users in the form:
+{
+  "user_id": [
+    "DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)",
+    ...
+  ],
+  ...
+}
+Each sequence has the format:
+DAY TIME site1 (duration1) -> site2 (duration2) -> ... -> siteN (durationN)
+
+Analyze the user browsing patterns by considering:
+- Common patterns in visited sites and their order
+- Typical times of activity and session durations
+- Day-of-week trends and patterns
+- More complex patterns that are not obvious from the sequence
+
+For each user, provide
+- a short, single-sentence description of the user's browsing pattern
+- a list of 3 simple keywords that describe the user's browsing pattern
+
+Return your analysis in the following JSON format:
+{
+  "user_id": {
+    "description": "Single sentence describing dominant user behavior pattern",
+    "keywords": ["keyword1", "keyword2", "keyword3"]
+  },
+  ...
+}
+
+For keywords, focus on timing, content preferences, usage patterns, and other relevant characteristics.
+
+Example output for a persona:
+{
+  "user_id": {
+    "description": "Business professional accessing productivity tools during weekday work hours",
+    "keywords": ["corporate", "daytime", "productivity"]
+  }
+}
+
+Only output valid JSON, no other text.
